@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.2.16 XL_Three.glb
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function XLThree({color}) {
+export function XLThree() {
   const { nodes, materials } = useGLTF('/XL_Three.glb')
   return ( 
     <group  dispose={null}>
@@ -18,7 +18,7 @@ export function XLThree({color}) {
               <mesh geometry={nodes.boot_movsteer_100_0.geometry} material={materials['movsteer_1.0.0']} />
               <mesh geometry={nodes.boot_movsteer_103_0.geometry} material={materials['movsteer_1.0.3']} />
               <mesh geometry={nodes.boot_movsteer_107_0.geometry} material={materials['movsteer_1.0.7']} />
-              <mesh geometry={nodes.boot_primary_0.geometry} material-roughness={1} material-metalness={0.5} material-color={color} />
+              <mesh geometry={nodes.boot_primary_0.geometry} material={materials.primary} />
               <mesh geometry={nodes.boot_wheel_rf0_0.geometry} material={materials['wheel_rf.0']} />
               <mesh geometry={nodes.boot_wheel_rf1_0.geometry} material={materials['wheel_rf.1']} />
               <mesh geometry={nodes.boot_wheel_rf5_0.geometry} material={materials['wheel_rf.5']} />
@@ -31,7 +31,7 @@ export function XLThree({color}) {
               <mesh geometry={nodes.breaklight_r002_right_rear_light_0.geometry} material={materials.right_rear_light} />
             </group>
             <group position={[0.005, 1.906, -0.419]}>
-              <mesh geometry={nodes.chassis_primary_0.geometry} material-roughness={1} material-metalness={0.5} material-color={color} />
+              <mesh geometry={nodes.chassis_primary_0.geometry} material={materials.primary} />
               <mesh geometry={nodes.chassis_wheel_rf0_0.geometry} material={materials['wheel_rf.0']} />
               <mesh geometry={nodes.carpet_carpet0_0.geometry} material={materials['carpet.0']} />
               <mesh geometry={nodes.carpet_carpet10_0.geometry} material={materials['carpet.10']} />
@@ -47,7 +47,7 @@ export function XLThree({color}) {
               <mesh geometry={nodes.carpet_xl6_int_b_seats1_0.geometry} material={materials['xl6_int_b_seats.1']} />
               <mesh geometry={nodes.plate_front_movsteer_107_0.geometry} material={materials['movsteer_1.0.7']} />
               <mesh geometry={nodes.plate_front_xl6_ext_b_021_0.geometry} material={materials['xl6_ext_b_02.1']} />
-              <mesh geometry={nodes.xl6_ext_b_02_primary_0.geometry} material-roughness={1} material-metalness={0.5} material-color={color} />
+              <mesh geometry={nodes.xl6_ext_b_02_primary_0.geometry} material={materials.primary} />
               <mesh geometry={nodes.xl6_ext_b_02_xl6_ext_b_021_0.geometry} material={materials['xl6_ext_b_02.1']} />
               <mesh geometry={nodes.xl6_ext_b_03_movsteer_103_0.geometry} material={materials['movsteer_1.0.3']} />
               <mesh geometry={nodes.xl6_ext_b_03_wheel_rf0_0.geometry} material={materials['wheel_rf.0']} />
@@ -59,9 +59,9 @@ export function XLThree({color}) {
               <mesh geometry={nodes.xl6_ext_b_06_xl6_ext_b_021_0.geometry} material={materials['xl6_ext_b_02.1']} />
               <mesh geometry={nodes.xl6_ext_b_07_wheel_rf0_0.geometry} material={materials['wheel_rf.0']} />
               <mesh geometry={nodes.xl6_ext_b_07_xl6_ext_b_021_0.geometry} material={materials['xl6_ext_b_02.1']} />
-              <mesh geometry={nodes.xl6_ext_b_bumper_r_primary_0.geometry} material-roughness={1} material-metalness={0.5} material-color={color} />
+              <mesh geometry={nodes.xl6_ext_b_bumper_r_primary_0.geometry} material={materials.primary} />
               <mesh geometry={nodes.xl6_ext_b_bumper_r_xl6_ext_b_021_0.geometry} material={materials['xl6_ext_b_02.1']} />
-              <mesh geometry={nodes.xl6_ext_b_carpaint_primary_0.geometry} material-roughness={1} material-metalness={0.5} material-color={color} />
+              <mesh geometry={nodes.xl6_ext_b_carpaint_primary_0.geometry} material={materials.primary} />
               <mesh geometry={nodes.xl6_ext_b_grille_d_wheel_rf5_0.geometry} material={materials['wheel_rf.5']} />
               <mesh geometry={nodes.xl6_ext_b_grille_f_wheel_rf0_0.geometry} material={materials['wheel_rf.0']} />
               <mesh geometry={nodes.xl6_ext_b_grille_f_wheel_rf1_0.geometry} material={materials['wheel_rf.1']} />
@@ -160,7 +160,7 @@ export function XLThree({color}) {
               <mesh geometry={nodes.door_lf_movsteer_103_0.geometry} material={materials['movsteer_1.0.3']} />
               <mesh geometry={nodes.door_lf_movsteer_107_0.geometry} material={materials['movsteer_1.0.7']} />
               <mesh geometry={nodes.door_lf_movsteer_109_0.geometry} material={materials['movsteer_1.0.9']} />
-              <mesh geometry={nodes.door_lf_primary_0.geometry} material-roughness={1} material-metalness={0.5} material-color={color} />
+              <mesh geometry={nodes.door_lf_primary_0.geometry} material={materials.primary} />
               <mesh geometry={nodes.door_lf_wheel_rf0_0.geometry} material={materials['wheel_rf.0']} />
               <mesh geometry={nodes.door_lf_wheel_rf5_0.geometry} material={materials['wheel_rf.5']} />
               <mesh geometry={nodes.door_lf_xl6_int_b_seats1_0.geometry} material={materials['xl6_int_b_seats.1']} />
@@ -173,7 +173,7 @@ export function XLThree({color}) {
               <mesh geometry={nodes.door_lr_movsteer_103_0.geometry} material={materials['movsteer_1.0.3']} />
               <mesh geometry={nodes.door_lr_movsteer_107_0.geometry} material={materials['movsteer_1.0.7']} />
               <mesh geometry={nodes.door_lr_movsteer_109_0.geometry} material={materials['movsteer_1.0.9']} />
-              <mesh geometry={nodes.door_lr_primary_0.geometry} material-roughness={1} material-metalness={0.5} material-color={color} />
+              <mesh geometry={nodes.door_lr_primary_0.geometry} material={materials.primary} />
               <mesh geometry={nodes.door_lr_wheel_rf0_0.geometry} material={materials['wheel_rf.0']} />
               <mesh geometry={nodes.door_lr_wheel_rf5_0.geometry} material={materials['wheel_rf.5']} />
               <mesh geometry={nodes.door_lr_xl6_int_b_seats1_0.geometry} material={materials['xl6_int_b_seats.1']} />
@@ -185,7 +185,7 @@ export function XLThree({color}) {
               <mesh geometry={nodes.door_rf_movsteer_103_0.geometry} material={materials['movsteer_1.0.3']} />
               <mesh geometry={nodes.door_rf_movsteer_107_0.geometry} material={materials['movsteer_1.0.7']} />
               <mesh geometry={nodes.door_rf_movsteer_109_0.geometry} material={materials['movsteer_1.0.9']} />
-              <mesh geometry={nodes.door_rf_primary_0.geometry} material-roughness={1} material-metalness={0.5} material-color={color} />
+              <mesh geometry={nodes.door_rf_primary_0.geometry} material={materials.primary} />
               <mesh geometry={nodes.door_rf_wheel_rf0_0.geometry} material={materials['wheel_rf.0']} />
               <mesh geometry={nodes.door_rf_wheel_rf5_0.geometry} material={materials['wheel_rf.5']} />
               <mesh geometry={nodes.door_rf_xl6_int_b_dashboard4_0.geometry} material={materials['xl6_int_b_dashboard.4']} />
@@ -199,7 +199,7 @@ export function XLThree({color}) {
               <mesh geometry={nodes.door_rr_movsteer_103_0.geometry} material={materials['movsteer_1.0.3']} />
               <mesh geometry={nodes.door_rr_movsteer_107_0.geometry} material={materials['movsteer_1.0.7']} />
               <mesh geometry={nodes.door_rr_movsteer_109_0.geometry} material={materials['movsteer_1.0.9']} />
-              <mesh geometry={nodes.door_rr_primary_0.geometry} material-roughness={1} material-metalness={0.5} material-color={color} />
+              <mesh geometry={nodes.door_rr_primary_0.geometry} material={materials.primary} />
               <mesh geometry={nodes.door_rr_wheel_rf0_0.geometry} material={materials['wheel_rf.0']} />
               <mesh geometry={nodes.door_rr_wheel_rf5_0.geometry} material={materials['wheel_rf.5']} />
               <mesh geometry={nodes.door_rr_xl6_int_b_seats1_0.geometry} material={materials['xl6_int_b_seats.1']} />
