@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.2.16 XL_Three.glb
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function XLThree() {
+export function XLThree({}) {
   const { nodes, materials } = useGLTF('/XL_Three.glb')
   return ( 
     <group  dispose={null}>
